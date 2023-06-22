@@ -37,17 +37,18 @@ def get_vectorstore(text_chunks):
     return vectorstore
 
 
-def get_coversation(vectorstore):
+def get_conversation_chain(vectorstore):
     llm = ChatOpenAI()
-    #llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_legth":512})
+    # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
-    memory = ConversationBufferMemory(memory_key='chat_history', return_msg=True)
-    conversation = ConversationalRetrievalChain.from_llm(
+    memory = ConversationBufferMemory(
+        memory_key='chat_history', return_messages=True)
+    conversation_chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=vectorstore.as_retriever(),
         memory=memory
     )
-    return conversation
+    return conversation_chain
 
 
 def handle_userinput(user_question):
@@ -60,7 +61,7 @@ def handle_userinput(user_question):
                 "{{MSG}}", message.content), unsafe_allow_html=True)
         else:
             st.write(bot_template.replace(
-                "{{MSG}}", message.content), unsafe_allow_html=True)  
+                "{{MSG}}", message.content), unsafe_allow_html=True)
 
 
 def main():
