@@ -14,3 +14,7 @@ Aplikasi ini mengikuti langkah-langkah berikut untuk memberikan respons terhadap
 4).Pencocokan Kesamaan: Ketika pertanyaan diajukan, aplikasi membandingkannya dengan potongan-potongan teks dan mengidentifikasi yang paling serupa secara semantik.
 
 5).Pembangkitan Respon: Potongan-potongan yang dipilih diberikan kepada model bahasa, yang menghasilkan respons berdasarkan konten relevan dari dokumen-dokumen PDF yang diberikan.
+
+## Streamlit Demo
+--------
+https://langchat-pdf.streamlit.app/
