@@ -1,0 +1,14 @@
+langchain
+PyPDF2
+python-dotenv
+streamlit
+openai
+faiss-cpu
+tiktoken
+
+# for huggingface llms
+# huggingface-hub
+
+# if use instructor embeddings
+# InstructorEmbedding
+# sentence-transformers
