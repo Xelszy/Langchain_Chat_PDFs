@@ -1,7 +1,7 @@
 # Langchain_Chat_PDFs
 First Langchain Project
 
-##Cara Kerja
+## Cara Kerja
 ---------------
 Aplikasi ini mengikuti langkah-langkah berikut untuk memberikan respons terhadap pertanyaan:
 
