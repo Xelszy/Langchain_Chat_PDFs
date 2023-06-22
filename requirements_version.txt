@@ -1,0 +1,13 @@
+langchain==0.0.208
+PyPDF2==3.0.1
+python-dotenv==1.0.0
+streamlit==1.23.1
+openai==0.27.8
+faiss-cpu==1.7.4
+
+# if use huggingface llms
+# huggingface-hub==0.15.1
+
+# if use instructor embeddings
+# InstructorEmbedding==1.0.1
+# sentence-transformers==2.2.2
